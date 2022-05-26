@@ -1,5 +1,31 @@
+.container {
+  display: inline;
+  margin: 0;
+}
+
+.main {
+  display: block;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 .title {
-  font-weight: 600;
+  font-size: 72pt;
+  padding: 0;
+  font-weight: 900;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 36pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description {
+  font-weight: 200;
+  font-size: 18pt;
+  text-align: center;
 }
 
 /*# sourceMappingURL=Home.module.css.map */
