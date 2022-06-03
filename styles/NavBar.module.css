@@ -25,6 +25,23 @@
   transform: translate(0, -3px);
 }
 
+.RightNavLink {
+  display: block;
+  float: right;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 14pt;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.RightNavLink hover {
+  color: #FFFFFF;
+  transform: translate(0, -3px);
+}
+
 .NavIcon {
   display: block;
   float: left;
