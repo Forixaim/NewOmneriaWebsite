@@ -1,20 +1,26 @@
-import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import dropdownStyles from '../styles/WikiDropdown.module.css'
+import next from "next"
+import React from "react"
+import styles from '../styles/NavBar.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+import WikiDropdown from "./dropdown"
+import { useUser } from "@auth0/nextjs-auth0"
 
-const WikiDropdown = () => {
+
+const WikiNavBar = () => {
+	const { user, error, isLoading } = useUser();
+
+	if (isLoading) return <div>Loading...</div>;
+	if (error) return <div>{error.message}</div>;
 	return (
-		<div className={dropdownStyles.dropdown}>
-			<button className={dropdownStyles.dropbtn}>Wiki</button>
-			<div className={dropdownStyles.dropcontent}>
-				<Link href="wiki/characters/"><a>Characters</a></Link>
-				<Link href="wiki/locations/"><a>Locations</a></Link>
-				<Link href="wiki/equipment/"><a>Equipment</a></Link>
+		<nav className="overflow-hidden bg-violet-900">
+			<div>
+				<Link href="../"><a className={styles.NavLink}>Home</a></Link>
+				<Link href="wiki"><a className={styles.NavLink}>Archives Home</a></Link>
+				<Link href="characters"><a className={styles.NavLink}>Characters</a></Link>
+				<Link href="locations"><a className={styles.NavLink}>Locations</a></Link>
 			</div>
-		</div>
+		</nav>
 	)
-};
-
-export default WikiDropdown
+}
+export default WikiNavBar

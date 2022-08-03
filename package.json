@@ -12,14 +12,17 @@
 		"@auth0/nextjs-auth0": "^1.9.0",
 		"@headlessui/react": "^1.6.2",
 		"@heroicons/react": "^1.0.6",
+		"@react-three/fiber": "^8.2.2",
 		"next": "12.1.6",
 		"react": "18.1.0",
-		"react-dom": "18.1.0"
+		"react-dom": "18.1.0",
+		"three": "^0.143.0"
 	},
 	"devDependencies": {
 		"@types/node": "17.0.35",
 		"@types/react": "18.0.9",
 		"@types/react-dom": "18.0.5",
+		"@types/three": "^0.143.0",
 		"autoprefixer": "^10.4.7",
 		"eslint": "8.16.0",
 		"eslint-config-next": "12.1.6",

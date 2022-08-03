@@ -13,15 +13,12 @@ const Navbar = () => {
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>;
 	return (
-		<nav className={styles.NavBarColor}>
+		<nav className="overflow-hidden bg-violet-900">
 			<div>
 				<Link href="/"><a className={styles.NavLink}>Home</a></Link>
-				<WikiDropdown/>
-				<Link href="contact"><a className={styles.NavLink}>Gallery</a></Link>
-				<Link href="donate"><a className={styles.NavLink}>Store</a></Link>
-				<Link href="https://www.forixaim.net/"><a className={styles.NavLink}>Forixaim</a></Link>
-				<Link href="/api/auth/login"><a className={styles.RightNavLink}>Sign In</a></Link>
-				<Link href="/api/auth/logout"><a className={styles.RightNavLink}>Sign Out</a></Link>
+				<Link href="/wiki/"><a className={styles.NavLink}>Archives</a></Link>
+				<Link href="store"><a className={styles.NavLink}>Store</a></Link>
+				<a href="https://www.forixaim.net/" className={styles.NavLink}>Forixaim</a>
 			</div>
 		</nav>
 	)
